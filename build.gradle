@@ -29,9 +29,13 @@ repositories {
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
   compile("org.springframework.boot:spring-boot-starter-data-jpa")
-//  compile("org.springframework.boot:spring-boot-starter-data-rest")
 	compile('org.codehaus.groovy:groovy')
 	runtime('com.h2database:h2')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+
+
+  compile("org.springframework.boot:spring-boot-starter-data-rest")
+
+  compile('org.spockframework:spock-spring:1.0-groovy-2.4')
 }
 
