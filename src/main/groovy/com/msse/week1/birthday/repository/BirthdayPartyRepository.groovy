@@ -5,6 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.data.rest.core.annotation.RepositoryRestResource
 
 @RepositoryRestResource
-public interface BirthdayPartyRespository extends JpaRepository<BirthdayParty, Long> {
+public interface BirthdayPartyRepository extends JpaRepository<BirthdayParty, Long> {
 
 }

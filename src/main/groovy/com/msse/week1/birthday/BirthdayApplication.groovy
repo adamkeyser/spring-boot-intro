@@ -1,7 +1,7 @@
 package com.msse.week1.birthday
 
 import com.msse.week1.birthday.model.BirthdayParty
-import com.msse.week1.birthday.repository.BirthdayPartyRespository
+import com.msse.week1.birthday.repository.BirthdayPartyRepository
 import com.msse.week1.birthday.repository.InviteeRepository
 import com.msse.week1.birthday.model.Invitee
 import org.springframework.boot.CommandLineRunner
@@ -18,7 +18,7 @@ class BirthdayApplication {
   }
 
   @Bean
-  CommandLineRunner onStart(InviteeRepository inviteeRespository, BirthdayPartyRespository birthdayPartyRespository) {
+  CommandLineRunner onStart(InviteeRepository inviteeRespository, BirthdayPartyRepository birthdayPartyRespository) {
     return new CommandLineRunner() {
       @Override
       @Transactional

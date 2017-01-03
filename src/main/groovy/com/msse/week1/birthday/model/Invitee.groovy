@@ -15,13 +15,15 @@ class Invitee {
     boolean attending
     int plusOnes
 
-    @Override
-    public String toString() {
-        return "Invitee{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", plusOnes=" + plusOnes +
-                '}';
-    }
+
+  @Override
+  public String toString() {
+    return "Invitee{" +
+        "id=" + id +
+        ", firstName='" + firstName + '\'' +
+        ", lastName='" + lastName + '\'' +
+        ", attending=" + attending +
+        ", plusOnes=" + plusOnes +
+        '}';
+  }
 }

@@ -18,7 +18,6 @@ Content-Type: application/json
 {"invitees" : ["http://localhost:8080/invitees/4"]}
  */
 @Entity
-@Table(name="birthday_party")
 class BirthdayParty {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
