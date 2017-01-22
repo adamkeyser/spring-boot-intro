@@ -1,10 +1,14 @@
 package com.msse.week1.autoDealer
 
+import com.msse.week1.autoDealer.controller.CarController
+import com.msse.week1.autoDealer.controller.DealershipController
+import com.msse.week1.autoDealer.repository.CarRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.boot.test.web.client.TestRestTemplate
 import org.springframework.test.context.ContextConfiguration
 import org.springframework.web.context.WebApplicationContext
+import spock.lang.Shared
 import spock.lang.Specification
 
 @ContextConfiguration
@@ -17,23 +21,31 @@ class DemoApplicationFunctionalSpec extends Specification {
   @Autowired
   TestRestTemplate testRestTemplate
 
+  @Shared
+  CarRepository carRepository = Mock(CarRepository)
 
-  def 'hellos the world'() {
-    setup:
-    Map map = [test: "test"]
+
+  def setup() {
+    context.getBean(CarController).carRespository = carRepository
+    context.getBean(DealershipController).dealershipRespository = dealershipController
+  }
+
+  def 'spring context loaded'() {
     when:
-    map << [test2: "test2"]
+    context
     then:
-    map.test2 == "test2"
-    context != null
+    context
   }
 
   def 'gets invitee'() {
     when:
-    def result = testRestTemplate.getForObject('/invitees/1', Map)
+    def result = testRestTemplate.getForObject('/cars/1', Map)
+
+
     then:
-    result.firstName == "adam"
-    result.lastName == "keyser"
+    carRepo
+    result.make == "Honda"
+    result.model == "Civic"
   }
 
   def 'searches by last name'() {

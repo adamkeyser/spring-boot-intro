@@ -20,13 +20,13 @@ class CarController {
     carRespository.findAll()
   }
 
-  @GetMapping("/car/{id}")
+  @GetMapping("/cars/{id}")
   Car getCar(@PathVariable long id) {
     carRespository.findOne(id)
   }
 
   //curl -H "Content-Type: application/json" -X POST -d '{"firstName":"sara", "lastName":"johnson"}' http://localhost:8080/invitee
-  @PostMapping("/car")
+  @PostMapping("/cars")
   Car addCar(@RequestBody Car car) {
     carRespository.save(car)
   }

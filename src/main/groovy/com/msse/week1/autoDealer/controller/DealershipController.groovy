@@ -18,7 +18,7 @@ class DealershipController {
     dealershipRespository.findAll()
   }
 
-  @GetMapping("/dealership/{id}")
+  @GetMapping("/dealerships/{id}")
   Dealership getDealership(@PathVariable long id) {
     dealershipRespository.findOne(id)
   }
