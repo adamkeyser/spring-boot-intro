@@ -1,4 +1,4 @@
-package com.msse.week1.birthday.model
+package com.msse.week1.autoDealer.model
 
 import com.fasterxml.jackson.annotation.JsonManagedReference
 import com.fasterxml.jackson.databind.annotation.JsonSerialize

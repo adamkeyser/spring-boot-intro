@@ -1,9 +1,9 @@
-package com.msse.week1.birthday
+package com.msse.week1.autoDealer
 
-import com.msse.week1.birthday.model.Dealership
-import com.msse.week1.birthday.repository.DealershipRepository
-import com.msse.week1.birthday.repository.CarRepository
-import com.msse.week1.birthday.model.Car
+import com.msse.week1.autoDealer.model.Dealership
+import com.msse.week1.autoDealer.repository.DealershipRepository
+import com.msse.week1.autoDealer.repository.CarRepository
+import com.msse.week1.autoDealer.model.Car
 import org.springframework.boot.CommandLineRunner
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication

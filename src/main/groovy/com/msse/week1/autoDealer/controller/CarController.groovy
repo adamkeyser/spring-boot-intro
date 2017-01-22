@@ -1,7 +1,7 @@
-package com.msse.week1.birthday.controller
+package com.msse.week1.autoDealer.controller
 
-import com.msse.week1.birthday.model.Car
-import com.msse.week1.birthday.repository.CarRepository
+import com.msse.week1.autoDealer.model.Car
+import com.msse.week1.autoDealer.repository.CarRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable

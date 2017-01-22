@@ -1,4 +1,4 @@
-package com.msse.week1.birthday
+package com.msse.week1.autoDealer
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest

@@ -1,6 +1,6 @@
-package com.msse.week1.birthday.repository
+package com.msse.week1.autoDealer.repository
 
-import com.msse.week1.birthday.model.Dealership
+import com.msse.week1.autoDealer.model.Dealership
 import org.springframework.data.jpa.repository.JpaRepository
 
 //@RepositoryRestResource
