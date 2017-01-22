@@ -2,7 +2,6 @@ package com.msse.week1.autoDealer.model
 
 import spock.lang.Specification
 
-
 class DealershipSpec extends Specification {
 
   Dealership dealership
@@ -40,8 +39,11 @@ class DealershipSpec extends Specification {
     result == expectedResult
 
     where:
-    description    | cars | expectedResult
-    'has no carts' | []   | 0
+    description             | cars                                                                                                               | expectedResult
+    'has no cars'           | []                                                                                                                 | 0
+    'has null cars'         | null                                                                                                               | 0
+    'has 1 car for sale'    | [new Car(carStatus: CarStatus.SALE)]                                                                               | 1
+    'has 3 cars 2 for sale' | [new Car(carStatus: CarStatus.SALE), new Car(carStatus: CarStatus.SALE), new Car(carStatus: CarStatus.PROCESSING)] | 2
 
   }
 

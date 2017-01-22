@@ -34,7 +34,7 @@ class Dealership {
 
   @JsonSerialize
   Integer carsForSale() {
-    return cars.count { it.forSale }
+    return cars?.count { it.forSale } ?: 0
   }
 
 }

@@ -7,7 +7,6 @@ import groovy.transform.EqualsAndHashCode
 import javax.persistence.*
 
 @Entity
-@EqualsAndHashCode
 class Car {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
