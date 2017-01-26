@@ -1,9 +1,9 @@
-package com.msse.week1.autoDealer
+package com.msse.week2.autoDealer
 
-import com.msse.week1.autoDealer.model.Dealership
-import com.msse.week1.autoDealer.repository.DealershipRepository
-import com.msse.week1.autoDealer.repository.CarRepository
-import com.msse.week1.autoDealer.model.Car
+import com.msse.week2.autoDealer.model.Car
+import com.msse.week2.autoDealer.model.Dealership
+import com.msse.week2.autoDealer.repository.CarRepository
+import com.msse.week2.autoDealer.repository.DealershipRepository
 import org.springframework.boot.CommandLineRunner
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
@@ -24,10 +24,8 @@ class DealershipApplication {
       @Transactional
       void run(String... args) throws Exception {
         Dealership dealership = new Dealership(dealershipName: "Fred's Cars")
-        Car honda1 = new Car(make: 'Honda', model: 'Corolla', year: 2000, price: 1000.3030, dealership: dealership)
+        Car honda1 = new Car(make: 'Honda', model: 'Civic', year: 2000, price: 1000.3030, dealership: dealership)
         Car toyota1 = new Car(make: 'Toyota', model: 'Corolla', year: 2015, price: 2500.999, dealership: dealership)
-//        carRepository.save(toyota1)
-//        carRepository.save(honda1)
 
         dealership.cars = [honda1, toyota1]
         dealershipRepository.save(dealership)
@@ -43,7 +41,6 @@ class DealershipApplication {
         println carRepository.getOne(1L)
         println dealershipRepository.getOne(1L)
 
-        //println carRepository.findByLastName('keyser')
       }
     }
   }

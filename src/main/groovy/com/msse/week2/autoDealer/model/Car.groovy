@@ -1,8 +1,7 @@
-package com.msse.week1.autoDealer.model
+package com.msse.week2.autoDealer.model
 
 import com.fasterxml.jackson.annotation.JsonBackReference
 import com.fasterxml.jackson.annotation.JsonIgnore
-import groovy.transform.EqualsAndHashCode
 
 import javax.persistence.*
 

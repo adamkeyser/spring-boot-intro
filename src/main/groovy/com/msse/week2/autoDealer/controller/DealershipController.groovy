@@ -1,7 +1,7 @@
-package com.msse.week1.autoDealer.controller
+package com.msse.week2.autoDealer.controller
 
-import com.msse.week1.autoDealer.model.Dealership
-import com.msse.week1.autoDealer.repository.DealershipRepository
+import com.msse.week2.autoDealer.model.Dealership
+import com.msse.week2.autoDealer.repository.DealershipRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
@@ -14,7 +14,7 @@ class DealershipController {
   DealershipRepository dealershipRespository
 
   @GetMapping("/dealerships")
-  Collection<Dealership> getDealerships() {
+  List<Dealership> getDealerships() {
     dealershipRespository.findAll()
   }
 
@@ -22,6 +22,5 @@ class DealershipController {
   Dealership getDealership(@PathVariable long id) {
     dealershipRespository.findOne(id)
   }
-
 
 }

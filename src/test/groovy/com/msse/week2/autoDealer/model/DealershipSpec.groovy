@@ -1,4 +1,4 @@
-package com.msse.week1.autoDealer.model
+package com.msse.week2.autoDealer.model
 
 import spock.lang.Specification
 
